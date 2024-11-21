@@ -10,7 +10,7 @@ def get_time(image):
         time_str = img.get("datetime_original")
         time = datetime.strptime(time_str, '%Y:%m:%d %H:%M:%S')
     return time
-
+#skibidi
 
 def get_time_difference(image_1, image_2):
     time_1 = get_time(image_1)
