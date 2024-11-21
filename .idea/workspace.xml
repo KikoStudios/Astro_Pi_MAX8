@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b783f-573a-4abf-b8cc-9d809ddacdd1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Astro_Pi_MAX8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cal_speed.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="714b783f-573a-4abf-b8cc-9d809ddacdd1" name="Changes" comment="Base Commmit - No Images" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +41,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": []
   }
 }]]></component>
   <component name="QodanaHighlightedReportService">
@@ -79,12 +79,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732205782421</updated>
-      <workItem from="1732205784728" duration="857000" />
+      <workItem from="1732205784728" duration="1165000" />
     </task>
+    <task id="LOCAL-00001" summary="Base Commmit - No Images">
+      <option name="closed" value="true" />
+      <created>1732206673567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732206673567</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Base Commmit - No Images">
+      <option name="closed" value="true" />
+      <created>1732206783849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732206783849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Base Commmit - No Images">
+      <option name="closed" value="true" />
+      <created>1732206899918</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732206899918</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Base Commmit - No Images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base Commmit - No Images" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Astro_Pi_MAX8$cal_speed.coverage" NAME="cal_speed Coverage Results" MODIFIED="1732206426058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
