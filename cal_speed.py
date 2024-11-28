@@ -77,8 +77,8 @@ def calculate_speed_in_kmps(feature_distance, GSD, time_difference):
     return speed
 
 
-image_1 = '53245976443_02e1a0a02e_o.jpg'
-image_2 = '53246044559_e91de58b03_o.jpg'
+image_1 = 'photo_0685.jpg'
+image_2 = 'photo_0686.jpg'
 
 time_difference = get_time_difference(image_1, image_2)  # get time difference between images
 image_1_cv, image_2_cv = convert_to_cv(image_1, image_2)  # create opencfv images objects
