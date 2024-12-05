@@ -1,0 +1,5 @@
+# Otevření souboru v režimu zápisu (write mode - 'w')
+with open("vystup.txt", "w") as soubor:
+    # Zapsání textu do souboru
+    soubor.write("Toto je můj první text v souboru.\n")
+    soubor.write("Přidávám další řádek textu.")
