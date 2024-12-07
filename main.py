@@ -1,9 +1,10 @@
 import os
+import time
 from datetime import datetime
-from picamera import PiCamera
 import cv2
 import math
 from exif import Image
+from picamera import PiCamera
 
 
 def get_time(image_path):
@@ -13,111 +14,64 @@ def get_time(image_path):
             time_str = img.get("datetime_original", None)
             if time_str:
                 return datetime.strptime(time_str, '%Y:%m:%d %H:%M:%S')
-    except Exception as e:
-        print(f"Error getting time from {image_path}: {e}")
-    return None
+    except Exception:
+        return None
 
 
-def get_time_difference(image_1, image_2):
-    time_1 = get_time(image_1)
-    time_2 = get_time(image_2)
+def capture_images(camera, num_images=2, interval=1):
+    if not os.path.exists('captured_images'):
+        os.makedirs('captured_images')
 
-    if time_1 and time_2:
-        time_difference = time_2 - time_1
-        return time_difference.total_seconds()
-    return None
+    image_paths = []
+    for i in range(num_images):
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        filename = f'captured_images/image_{timestamp}.jpg'
+        camera.capture(filename)
+        image_paths.append(filename)
+        time.sleep(interval)
 
-
-def convert_to_cv(image_path):
-    return cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-
-
-def calculate_features(image, feature_number=1000):
-    orb = cv2.ORB_create(nfeatures=feature_number)
-    keypoints, descriptors = orb.detectAndCompute(image, None)
-    return keypoints, descriptors
-
-
-def calculate_matches(descriptors_1, descriptors_2):
-    brute_force = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
-    matches = brute_force.match(descriptors_1, descriptors_2)
-    return sorted(matches, key=lambda x: x.distance)
-
-
-def find_matching_coordinates(keypoints_1, keypoints_2, matches):
-    coordinates_1 = []
-    coordinates_2 = []
-    for match in matches:
-        (x1, y1) = keypoints_1[match.queryIdx].pt
-        (x2, y2) = keypoints_2[match.trainIdx].pt
-        coordinates_1.append((x1, y1))
-        coordinates_2.append((x2, y2))
-    return coordinates_1, coordinates_2
-
-
-def calculate_mean_distance(coordinates_1, coordinates_2):
-    distances = [math.hypot(c1[0] - c2[0], c1[1] - c2[1])
-                 for c1, c2 in zip(coordinates_1, coordinates_2)]
-    return sum(distances) / len(distances) if distances else 0
-
-
-def calculate_speed_in_kmps(feature_distance, GSD, time_difference):
-    if time_difference == 0:
-        return 0
-
-    distance = feature_distance * GSD / 100000
-    speed = distance / time_difference * 3600
-    return speed
+    return image_paths
 
 
 def process_images(image_1_path, image_2_path, gsd=12648):
-    time_difference = get_time_difference(image_1_path, image_2_path)
-    if time_difference is None:
-        return None
+    time_difference = (get_time(image_2_path) - get_time(image_1_path)).total_seconds()
 
-    image_1_cv = convert_to_cv(image_1_path)
-    image_2_cv = convert_to_cv(image_2_path)
+    image_1_cv = cv2.imread(image_1_path, cv2.IMREAD_GRAYSCALE)
+    image_2_cv = cv2.imread(image_2_path, cv2.IMREAD_GRAYSCALE)
 
-    if image_1_cv is None or image_2_cv is None:
-        return None
+    orb = cv2.ORB_create(nfeatures=1000)
+    keypoints_1, descriptors_1 = orb.detectAndCompute(image_1_cv, None)
+    keypoints_2, descriptors_2 = orb.detectAndCompute(image_2_cv, None)
 
-    keypoints_1, descriptors_1 = calculate_features(image_1_cv)
-    keypoints_2, descriptors_2 = calculate_features(image_2_cv)
+    brute_force = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
+    matches = brute_force.match(descriptors_1, descriptors_2)
+    matches = sorted(matches, key=lambda x: x.distance)
 
-    matches = calculate_matches(descriptors_1, descriptors_2)
+    coordinates_1 = [keypoints_1[match.queryIdx].pt for match in matches]
+    coordinates_2 = [keypoints_2[match.trainIdx].pt for match in matches]
 
-    coordinates_1, coordinates_2 = find_matching_coordinates(keypoints_1, keypoints_2, matches)
+    distances = [math.hypot(c1[0] - c2[0], c1[1] - c2[1])
+                 for c1, c2 in zip(coordinates_1, coordinates_2)]
 
-    average_feature_distance = calculate_mean_distance(coordinates_1, coordinates_2)
-    speed = calculate_speed_in_kmps(average_feature_distance, gsd, time_difference)
+    average_feature_distance = sum(distances) / len(distances) if distances else 0
 
-    return {
-        'time_difference': time_difference,
-        'average_feature_distance': average_feature_distance,
-        'speed_kmph': speed
-    }
+    distance = average_feature_distance * gsd / 100000
+    speed = distance / time_difference
+
+    return speed
 
 
 def main():
-    images_dir = '/path/to/images/'  # Update with your image directory
-    results_path = '/path/to/results.txt'  # Update with your results file path
+    camera = PiCamera()
+    camera.resolution = (2592, 1944)
+    camera.rotation = 180
 
-    image_files = sorted([os.path.join(images_dir, f) for f in os.listdir(images_dir) if f.endswith(('.jpg', '.png'))])
+    image_paths = capture_images(camera, num_images=2, interval=5)
 
-    with open(results_path, 'w') as results_file:
-        for i in range(len(image_files) - 1):
-            image_1 = image_files[i]
-            image_2 = image_files[i + 1]
+    speed = process_images(image_paths[0], image_paths[1])
 
-            result = process_images(image_1, image_2)
-            if result:
-                results_file.write(f"Analysis between {os.path.basename(image_1)} and {os.path.basename(image_2)}:\n")
-                results_file.write(f"Time Difference: {result['time_difference']} seconds\n")
-                results_file.write(f"Average Feature Distance: {result['average_feature_distance']:.2f} pixels\n")
-                results_file.write(f"Estimated Speed: {result['speed_kmph']:.2f} km/h\n")
-                results_file.write("---\n")
-
-                print(f"Processed {os.path.basename(image_1)} and {os.path.basename(image_2)}")
+    with open('result.txt', 'w') as f:
+        f.write(f"{speed:.4f}")
 
 
 if __name__ == "__main__":
