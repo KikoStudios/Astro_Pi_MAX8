@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="714b783f-573a-4abf-b8cc-9d809ddacdd1" name="Changes" comment="Commit Optimalized For AstroPiReplay">
-      <change afterPath="$PROJECT_DIR$/cal_speed_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_5_24,_6_27 PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_5_24__6_27PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
   "keyToString": {
     "Python.cal_speed.executor": "Run",
     "Python.cal_speed_file.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -113,7 +114,9 @@
       <workItem from="1732454056092" duration="37000" />
       <workItem from="1732813590557" duration="1961000" />
       <workItem from="1732818264070" duration="827000" />
-      <workItem from="1733419603913" duration="3496000" />
+      <workItem from="1733419603913" duration="3714000" />
+      <workItem from="1734013919877" duration="55000" />
+      <workItem from="1734025092360" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="Base Commmit - No Images">
       <option name="closed" value="true" />
@@ -171,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732818338830</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit Optimalized For AstroPiReplay">
+      <option name="closed" value="true" />
+      <created>1733595100308</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733595100308</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit Optimalized For AstroPiReplay">
+      <option name="closed" value="true" />
+      <created>1733595114749</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733595114749</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
