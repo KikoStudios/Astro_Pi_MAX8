@@ -40,10 +40,14 @@ def process_images(image_1, image_2):
 start_time = time.time()
 image_counter = 0
 previous_image = None
+duration = 4 * 60  # 4 minutes in seconds
 
 # Open the result.txt file in write mode
 with open('result.txt', 'w') as f:
-    while time.time() - start_time < 4 * 60:
+    while True:
+        elapsed_time = time.time() - start_time
+        if elapsed_time > duration:
+            break
         current_image = capture_and_process(image_counter)
         if previous_image:
             process_images(previous_image, current_image)
