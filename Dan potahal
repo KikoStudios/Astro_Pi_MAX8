@@ -5,6 +5,7 @@ from datetime import datetime
 import cv2
 import math
 import os
+import sys
 
 start_time = time.time()
 duration = 1 * 60  # 4 minutes in seconds
