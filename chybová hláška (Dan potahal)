@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/lib/python312.zip/_pyodide/_base.py", line 574, in eval_code_async
+    await CodeRunner(
+  File "/lib/python312.zip/_pyodide/_base.py", line 394, in run_async
+    coroutine = eval(self.code, globals, locals)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "main.py", line 56, in <module>
+    current_image = capture_and_process(image_counter)
+                                        ^^^^^^^^^^^^^
+NameError: name 'image_counter' is not defined
