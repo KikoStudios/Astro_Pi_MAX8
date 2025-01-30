@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (Astro_Pi_MAX8)" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (Astro_Pi_MAX8)" project-jdk-type="Python SDK" />
 </project>

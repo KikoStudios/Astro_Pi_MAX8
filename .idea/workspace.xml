@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b783f-573a-4abf-b8cc-9d809ddacdd1" name="Changes" comment="Commit Optimalized For AstroPiReplay">
+    <list default="true" id="714b783f-573a-4abf-b8cc-9d809ddacdd1" name="Changes" comment="Base Commmit - No Images">
+      <change afterPath="$PROJECT_DIR$/mainy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pic_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pic_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Astro_Pi_MAX8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Astro_Pi_MAX8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,25 +23,7 @@
       <option value="directory" />
     </option>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="kiko &lt;hrdykrystof@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -47,11 +35,11 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/KikoStudios/Astro_Pi_MAX8.git&quot;,
-    &quot;accountId&quot;: &quot;e664cfb2-41fc-4947-8a76-9706f74ecb5e&quot;
+    &quot;accountId&quot;: &quot;9ee35857-e0dd-4127-8244-d89a37083f56&quot;
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -65,12 +53,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.cal_speed.executor": "Run",
-    "Python.cal_speed_file.executor": "Run",
-    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/kiko/PycharmProjects/Astro_Pi_MAX8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,11 +71,6 @@
     <option name="descriptions">
       <ReportDescription localRun="true" path="/tmp/qodana_output/qodana.sarif.json" reportGuid="b7d021b3-b196-462d-8850-f7d7ce20d357" reportId="Astro_Pi_MAX8/qodana/2024-11-21" />
     </option>
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -108,13 +88,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732205782421</updated>
-      <workItem from="1732205784728" duration="3350000" />
-      <workItem from="1732454056092" duration="37000" />
-      <workItem from="1732813590557" duration="1961000" />
-      <workItem from="1732818264070" duration="827000" />
-      <workItem from="1733419603913" duration="3714000" />
-      <workItem from="1734013919877" duration="55000" />
-      <workItem from="1734025092360" duration="1686000" />
+      <workItem from="1732205784728" duration="1165000" />
+      <workItem from="1738258868509" duration="1605000" />
     </task>
     <task id="LOCAL-00001" summary="Base Commmit - No Images">
       <option name="closed" value="true" />
@@ -140,63 +115,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732206899918</updated>
     </task>
-    <task id="LOCAL-00004" summary="Base Commmit - No Images">
-      <option name="closed" value="true" />
-      <created>1732207121738</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732207121738</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Base Commmit - No Images">
-      <option name="closed" value="true" />
-      <created>1732207234527</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1732207234527</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Base Commmit - No Images">
-      <option name="closed" value="true" />
-      <created>1732207421148</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1732207421148</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Commit Optimalized For AstroPiReplay">
-      <option name="closed" value="true" />
-      <created>1732818338830</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1732818338830</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Commit Optimalized For AstroPiReplay">
-      <option name="closed" value="true" />
-      <created>1733595100308</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1733595100308</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Commit Optimalized For AstroPiReplay">
-      <option name="closed" value="true" />
-      <created>1733595114749</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1733595114749</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Commit Optimalized For AstroPiReplay">
-      <option name="closed" value="true" />
-      <created>1734026753186</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1734026753186</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,12 +123,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base Commmit - No Images" />
-    <MESSAGE value="Commit Optimalized For AstroPiReplay" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Optimalized For AstroPiReplay" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base Commmit - No Images" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Astro_Pi_MAX8$cal_speed_file.coverage" NAME="cal_speed_file Coverage Results" MODIFIED="1733420362804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Astro_Pi_MAX8$cal_speed.coverage" NAME="cal_speed Coverage Results" MODIFIED="1732814975268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Astro_Pi_MAX8$main.coverage" NAME="main Coverage Results" MODIFIED="1734026448288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sigma" />
+    <SUITE FILE_PATH="coverage/Astro_Pi_MAX8$cal_speed.coverage" NAME="cal_speed Coverage Results" MODIFIED="1732206426058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
