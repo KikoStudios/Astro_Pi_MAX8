@@ -85,7 +85,7 @@ def calculate_speed(keypoints, matches, gsd, time_interval):
     logger.debug(f"Calculated speed: {speed_kmps:.6f} km/s")
     return speed_kmps
 
-
+#ddd
 def main():
     logger.info("Starting the speed calculation process")
     image_files, timestamps = capture_images()  # Capture images and get timestamps
